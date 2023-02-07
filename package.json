@@ -1,7 +1,7 @@
 {
   "name": "ts-commandhandler-kit",
   "version": "1.0.0",
-  "description": "A simple Discord Bot made with Typescript using the Discord.js library",
+  "description": "An all-in-one file for you to use as a discord command handler. Made with Typescript using the Discord.js library",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
