@@ -1,5 +1,5 @@
 {
-  "name": "ts-discordbot-basic-template",
+  "name": "ts-commandhandler-kit",
   "version": "1.0.0",
   "description": "A simple Discord Bot made with Typescript using the Discord.js library",
   "main": "index.ts",
