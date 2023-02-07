@@ -1,0 +1,19 @@
+{
+  "name": "ts-discordbot-basic-template",
+  "version": "1.0.0",
+  "description": "A simple Discord Bot made with Typescript using the Discord.js library",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Awokens",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "glob": "^8.1.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.1"
+  }
+}
