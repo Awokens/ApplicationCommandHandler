@@ -83,7 +83,7 @@ export class ExtendedClient extends Client {
 		 * Searches for `.ts` and `.js` files and loads them as modules.
 		 */
 		const commandsFolderFiles = await globPromise(
-			`${__dirname}/src/commands/**/*{.ts,.js}`
+			`${__dirname}/commands/**/*{.ts,.js}`
 		);
 
 		let applicationCommands: ApplicationCommandDataResolvable[] = [];
