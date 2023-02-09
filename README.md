@@ -1,8 +1,12 @@
-# Application Command Handler
-
-This project's purpose is to simplify the creation of Discord bot commands using Discord.js by building the Discord client and managing command registration.
+## About
+This project's purpose is to simplify the creation of Discord bot commands using Discord.js
+- Make sure to read the [discord.js docs](https://discord.js.org/#/docs/discord.js/main/general/welcome) if you're new to discord.js.
+- The source code has documentation to help you understand the code.
 
 ## Installation
+
+Before installing, Node.js 16.9.0 or newer is required.
+
 To install the required packages, run the following command:
 ```
 npm update
@@ -50,9 +54,5 @@ export default new ApplicationCommand({
 });
 
 ```
-## Notes
-- Make sure to read the [discord.js docs](https://discord.js.org/#/docs/discord.js/main/general/welcome) if you're new to discord.js.
-- Example commands are located in the `/commands/` directory.
-- The source code has documentation to help you understand the code.
 
 
