@@ -52,7 +52,7 @@ export default new ApplicationCommand({
 ```
 ## Notes
 - Make sure to read the [discord.js docs](https://discord.js.org/#/docs/discord.js/main/general/welcome) if you're new to discord.js.
-- Example commands are located in the /commands/ directory.
+- Example commands are located in the `/commands/` directory.
 - The source code has documentation to help you understand the code.
 
 
