@@ -13,12 +13,12 @@ npm i discord.js glob @types/glob util
 ```
 
 ## Class Definitions
-- ApplicationCommand - A basic class for representing an application command. The command's options are passed in as an ApplicationCommandType object.
-- ExtendedClient - The main class for building a Discord bot using Discord.js. This class extends the Client class and adds the ability to register and manage application commands.
+- ``ApplicationCommand`` - A basic class for representing an application command. The command's options are passed in as an ApplicationCommandType object.
+- ``ExtendedClient`` - The main class for building a Discord bot using Discord.js. This class extends the Client class and adds the ability to register and manage application commands.
 
 ## Interfaces
-- ApplicationCommandType - An interface for defining the options for an ApplicationCommand.
-- ApplicationCommandRegisterOptions - An interface for defining the options for registering application commands with the ExtendedClient.
+- ``ApplicationCommandType`` - An interface for defining the options for an ApplicationCommand.
+- ``ApplicationCommandRegisterOptions`` - An interface for defining the options for registering application commands with the ExtendedClient.
 
 ## Documentation
 
