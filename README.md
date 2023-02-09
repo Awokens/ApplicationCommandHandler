@@ -22,21 +22,9 @@ npm i discord.js glob @types/glob util
 
 ## Documentation
 
-Creating an application command is quite simple, here are two examples:
+Creating an application command is quite simple, here is an example below
 ```typescript
 export default new ApplicationCommand({
-    name: 'example',
-    description: 'This is an example command',
-    run: ({ interaction }) => {
-        interaction.reply({
-            content: 'Hello, World'
-        });
-    }
-});
-```
-
-```javascript
-module.export = new ApplicationCommand({
     name: 'example',
     description: 'This is an example command',
     run: ({ interaction }) => {
