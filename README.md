@@ -1,13 +1,13 @@
 # Application Command Handler
 
-The goal of this project is to simplify creating application commands.
+The goal of this project is to simplify creating application commands for Discord bots using Discord.js.
 
 ## Installation
-I already have the ``package.json`` setup so just do:
+To install the required packages, run the following command:
 ```
 npm update
 ```
-Unless you want to manually install:
+If you want to install the packages manually, run the following command:
 ```
 npm i discord.js glob @types/glob util
 ```
@@ -37,7 +37,7 @@ npm i discord.js glob @types/glob util
 
 # Application Command Example
 
-Creating an application command is quite simple, here is an example below
+Here is a list of the properties available for an application command:
 ```typescript
 export default new ApplicationCommand({
     name: 'example',
@@ -51,8 +51,8 @@ export default new ApplicationCommand({
 
 ```
 ## Important Notes
-- Please read the [discord.js docs](https://discord.js.org/#/docs/discord.js/main/general/welcome) if you are new to discord.js
-- The example commands are recognized under the directory `/commands/` as an example.
-- The source code has documentation in case you need extra help on understanding the code.
+- Make sure to read the [discord.js docs](https://discord.js.org/#/docs/discord.js/main/general/welcome) if you're new to discord.js.
+- Example commands are located in the /commands/ directory.
+- The source code has documentation to help you understand the code.
 
 
