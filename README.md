@@ -1,6 +1,6 @@
 # Application Command Handler
 
-The goal of this project is to simplify creating application commands for Discord bots using Discord.js.
+This project's purpose is to simplify the creation of Discord bot commands using Discord.js by building the Discord client and managing command registration.
 
 ## Installation
 To install the required packages, run the following command:
