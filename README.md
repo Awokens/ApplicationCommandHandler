@@ -40,8 +40,6 @@ npm i discord.js glob @types/glob util
 | run            | RunFunction                                                                        | The function to run the command                                                                                                                                       |
 
 ## Application Command Example
-
-Here is a list of the properties available for an application command:
 ```typescript
 export default new ApplicationCommand({
     name: 'example',
