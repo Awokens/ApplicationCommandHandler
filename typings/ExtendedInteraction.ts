@@ -1,8 +1,6 @@
 import { ChatInputCommandInteraction, GuildMember } from "discord.js";
 
-/**
- * Extended interaction with the member who made the interaction.
- */
+/* Extending the ChatInputCommandInteraction interface with a new property called member. */
 export interface ExtendedInteraction extends ChatInputCommandInteraction {
 	member: GuildMember;
 }
