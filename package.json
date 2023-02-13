@@ -9,10 +9,11 @@
   "author": "Awokens",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.7.1",
-    "glob": "^7.2.0",
     "@types/glob": "^7.2.0",
     "@types/node": "^16.11.6",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "glob": "^7.2.0",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^4.1.0"
   }
