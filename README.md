@@ -17,6 +17,16 @@ Or if you want to install the packages manually, run the following command:
 ```
 npm i discord.js glob @types/glob @types/node ts-node tsconfig-paths
 ```
+4. Once you have your packages settled, open up the `.env` file
+5. Fill out the necessary key values:
+- `botToken` Your Discord bot's token
+- `clientId` The Guild ID where the bot resides in
+- `guildId` The Discord bot's user ID
+6. Head back to your terminal and enter this command: ``ts-node index.ts``
+- Your bot should start up successfully and print the indication as well
+7. This project comes with preinstalled commands in the `/commands/` directory:
+- Try out `/hello` in your Discord server
+8. Enjoy and happy coding :)
 ## Classes
 | Name         | Description                                                                                                                                                     |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
