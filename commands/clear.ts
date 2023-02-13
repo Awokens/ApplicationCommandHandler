@@ -16,5 +16,9 @@ export default new ApplicationCommand({
     ],
     run: async ({ interaction }) => {
         // do stuff
+        interaction.reply({
+            content: 'This command has no functionality, add some stuff to it :)',
+            ephemeral: true
+        })
     }
 })
