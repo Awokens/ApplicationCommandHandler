@@ -5,7 +5,7 @@ This project's purpose is to simplify the creation of Discord bot commands using
 
 ## Installation
 
-Before installing, Node.js 16.9.0 or newer is required.
+Before installing, [Node.js 16.9.0](https://nodejs.org/en/) or newer is required.
 
 1. Clone the ApplicationCommandHandler repo
 2. Open the terminal under the cloned repo's directory
