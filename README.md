@@ -15,7 +15,7 @@ npm install
 ```
 Or if you want to install the packages manually, run the following command:
 ```
-npm i discord.js glob @types/glob @types/node ts-node tsconfig-paths
+npm i discord.js glob @types/glob @types/node ts-node tsconfig-paths dotenv
 ```
 4. Once you have your packages settled, open up the `.env` file
 5. Fill out the necessary key values:
