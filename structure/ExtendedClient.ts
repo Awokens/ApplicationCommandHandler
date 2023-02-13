@@ -147,7 +147,11 @@ export class ExtendedClient extends Client {
 			const command = this.commands.get(interaction?.commandName);
 
 			if (!(command instanceof ApplicationCommand)) {
-				throw new Error('Non existent command has been executed.');
+				interaction.reply({
+					content: 'This command has no functionality',
+					ephemeral: true
+				});
+				return;
 			}
 		
 			await command.run({
