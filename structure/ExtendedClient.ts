@@ -139,6 +139,22 @@ export class ExtendedClient extends Client {
 				interaction: interaction as ExtendedInteraction
 			}).catch(console.error);
 		})
+
+		this.on('interactionCreate', async (interaction) => {
+
+			if (!interaction.isChatInputCommand()) return;
+
+			const command = this.commands.get(interaction?.commandName);
+
+			if (!(command instanceof ApplicationCommand)) {
+				throw new Error('Non existent command has been executed.');
+			}
+		
+			await command.run({
+				interaction: interaction as ExtendedInteraction
+			}).catch(console.error);
+
+		});
 	}
 
 

@@ -1,4 +1,4 @@
-import { ChatInputApplicationCommandData, CommandInteractionOptionResolver } from "discord.js";
+import { ChatInputApplicationCommandData, Client, CommandInteractionOptionResolver } from "discord.js";
 import { ExtendedInteraction } from "./ExtendedInteraction";
 
 /**
