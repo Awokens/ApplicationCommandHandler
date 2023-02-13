@@ -15,7 +15,7 @@ npm install
 ```
 Or if you want to install the packages manually, run the following command:
 ```
-npm install discord.js glob @types/glob util dotenv
+npm i discord.js glob @types/glob @types/node ts-node tsconfig-paths
 ```
 ## Classes
 | Name         | Description                                                                                                                                                     |
