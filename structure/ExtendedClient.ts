@@ -2,23 +2,19 @@ import {
 	ApplicationCommandDataResolvable,
 	GatewayIntentBits,
 	Collection,
-	Client,
-	ApplicationCommand,
+	Client
 } from "discord.js";
+
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 import glob from 'glob';
 
 import { promisify } from "util";
+import { ApplicationCommand } from './ApplicationCommand'
 import { ApplicationCommandType } from "../typings/ApplicationCommandType";
 import { ApplicationCommandRegisterOptions } from "../typings/ApplicationCommandRegisterOptions";
 import { ExtendedInteraction } from "../typings/ExtendedInteraction";
-
-/**
- * Handles unhandled rejections and logs the error.
- */
-process.on('unhandledRejection', (error) => {
-	console.log('Unhandled Rejection Error\n', error)
-});
 
 /**
  * Promisified version of the glob module.
@@ -55,7 +51,7 @@ export class ExtendedClient extends Client {
 	 */
 	async initialize() {
 		this.registerModules();
-		this.login(process.env['botToken']);
+		this.login(process.env['botToken'] as string);
 
 	}
 
@@ -84,7 +80,7 @@ export class ExtendedClient extends Client {
 		 * Searches for `.ts` and `.js` files and loads them as modules.
 		 */
 		const commandsFolderFiles = await globPromise(
-			`${__dirname}/commands/**/*{.ts,.js}`
+			`${__dirname}/../commands/**/*{.ts,.js}`
 		);
 
 		let applicationCommands: ApplicationCommandDataResolvable[] = [];
@@ -98,6 +94,7 @@ export class ExtendedClient extends Client {
 			 * Adds the loaded command module to the commands Collection for future reference.
 			 */
 			this.commands.set(command.name, command);
+			console.debug(command.name)
 
 			applicationCommands.push(command);
 
@@ -114,31 +111,6 @@ export class ExtendedClient extends Client {
 
 			console.log('Discord Bot is ready ✓');
 		});
-
-		this.on('interactionCreate', async (interaction) => {
-			/**
-			 * If the interaction is not a chat input command, return immediately.
-			 */
-			if (!interaction.isChatInputCommand()) return;
-
-			/**
-			 * Get the command associated with the interaction's command name.
-			 */
-			const command = this.commands.get(interaction?.commandName);
-
-			/**
-			 * If the command is not an instance of ApplicationCommand, return immediately.
-			 */
-			if (!(command instanceof ApplicationCommand)) return;
-
-			/**
-			 * Execute the command, passing the interaction as the argument.
-			 * Log any errors that occur to the console.
-			 */
-			await command.run({
-				interaction: interaction as ExtendedInteraction
-			}).catch(console.error);
-		})
 
 		this.on('interactionCreate', async (interaction) => {
 
