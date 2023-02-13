@@ -1,20 +1,19 @@
 {
-  "name": "ApplicationCommandHandler",
+  "name": "applicationcommandhandler",
   "version": "1.2.0",
   "description": "An all-in-one file for you to use as a discord command handler. Made with Typescript using the Discord.js library",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node index.ts"
   },
   "author": "Awokens",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3",
-    "glob": "^8.1.0",
-    "util": "^0.12.5"
-  },
-  "devDependencies": {
-    "@types/glob": "^8.0.1"
+    "glob": "^7.2.0",
+    "@types/glob": "^7.2.0",
+    "@types/node": "^16.11.6",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^4.1.0"
   }
 }
