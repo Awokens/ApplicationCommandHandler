@@ -1,4 +1,4 @@
-import { ExtendedClient } from "./structure/ExtendedClient";
+import { ExtendedClient } from "./src/structure/ExtendedClient";
 
 /**
  * Instantiates an instance of the ExtendedClient.
