@@ -1,6 +1,6 @@
 {
   "name": "applicationcommandhandler",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An all-in-one file for you to use as a discord command handler. Made with Typescript using the Discord.js library",
   "main": "index.ts",
   "scripts": {
