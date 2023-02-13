@@ -11,6 +11,7 @@ import glob from 'glob';
 import { promisify } from "util";
 import { ApplicationCommandType } from "../typings/ApplicationCommandType";
 import { ApplicationCommandRegisterOptions } from "../typings/ApplicationCommandRegisterOptions";
+import { ExtendedInteraction } from "../typings/ExtendedInteraction";
 
 /**
  * Handles unhandled rejections and logs the error.
@@ -112,6 +113,33 @@ export class ExtendedClient extends Client {
 			});
 
 			console.log('Discord Bot is ready ✓');
+		});
+
+		this.on('interactionCreate', async (interaction) => {
+			/**
+			 * If the interaction is not a chat input command, return immediately.
+			 */
+			if (!interaction.isChatInputCommand()) return;
+
+			/**
+			 * Get the command associated with the interaction's command name.
+			 */
+			const command = this.commands.get(interaction?.commandName);
+
+			/**
+			 * If the command is not an instance of ApplicationCommand, return immediately.
+			 */
+			if (!(command instanceof ApplicationCommand)) return;
+
+			/**
+			 * Execute the command, passing the interaction as the argument.
+			 * Log any errors that occur to the console.
+			 */
+			await command.run({
+				interaction: interaction as ExtendedInteraction
+			}).catch(console.error);
 		})
 	}
+
+
 }
