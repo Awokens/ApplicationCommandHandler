@@ -1,5 +1,5 @@
 import { ApplicationCommandOptionType as OptionType} from "discord.js";
-import { ApplicationCommand } from "../src/structure/ApplicationCommand";
+import { ApplicationCommand } from "../structure/ApplicationCommand";
 
 export default new ApplicationCommand({
     name: 'clear',
