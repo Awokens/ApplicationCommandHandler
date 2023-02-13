@@ -7,13 +7,15 @@ This project's purpose is to simplify the creation of Discord bot commands using
 
 Before installing, Node.js 16.9.0 or newer is required.
 
-To install the required packages, run the following command:
+1. Clone the ApplicationCommandHandler repo
+2. Open the terminal under the cloned repo's directory
+3. Enter the following command:
 ```
-npm update
+npm install
 ```
-If you want to install the packages manually, run the following command:
+Or if you want to install the packages manually, run the following command:
 ```
-npm i discord.js glob @types/glob util
+npm install discord.js glob @types/glob util dotenv
 ```
 ## Classes
 | Name         | Description                                                                                                                                                     |
