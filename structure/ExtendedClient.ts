@@ -52,7 +52,6 @@ export class ExtendedClient extends Client {
 	async initialize() {
 		this.registerModules();
 		this.login(process.env['botToken'] as string);
-
 	}
 
 	/**
@@ -74,6 +73,8 @@ export class ExtendedClient extends Client {
 		this.guilds.cache.get(guildId)?.commands.set(commands)
 	}
 
+
+
 	async registerModules() {
 		/**
 		 * Registers all commands found in the `src/commands` directory.
@@ -83,22 +84,21 @@ export class ExtendedClient extends Client {
 			`${__dirname}/../commands/**/*{.ts,.js}`
 		);
 
-		let applicationCommands: ApplicationCommandDataResolvable[] = [];
+		const applicationCommands: ApplicationCommandDataResolvable[] = [];
 
-		commandsFolderFiles.forEach(async (path) => {
+		for (const path of commandsFolderFiles) {
 			const command: ApplicationCommandType = await this.importFile(path);
 
-			if (!(command instanceof ApplicationCommand)) return;
+			if (!(command instanceof ApplicationCommand)) continue;
 
 			/**
 			 * Adds the loaded command module to the commands Collection for future reference.
 			 */
 			this.commands.set(command.name, command);
-			console.debug(command.name)
+			console.debug(command.name);
 
 			applicationCommands.push(command);
-
-		});
+		}
 
 		this.once('ready', () => {
 			/**
@@ -125,7 +125,7 @@ export class ExtendedClient extends Client {
 				});
 				return;
 			}
-		
+
 			await command.run({
 				interaction: interaction as ExtendedInteraction
 			}).catch(console.error);
